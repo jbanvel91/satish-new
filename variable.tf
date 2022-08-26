@@ -5,17 +5,27 @@ variable "vpc_cidr" {
 
 variable "region" {
   type    = string
-  default = "ap-southeast-1"
+  default = "ap-south-1"
 }
 variable "ami" {
   type = map
   default = {
-    ap-southeast-1 = "ami-0012a981fe3b8891f"
+    ap-south-1 = "ami-059af0b76ba105e7e"
   }
 }
 variable "web_ins_type" {
   default = "t2.micro"
 }
+variable "web_tags" {
+  type = map
+  default={
+    Name = "webserver"
+  }
+}
+variable "web_server_no" {
+   default = "1"
+}
+
 
 
 
